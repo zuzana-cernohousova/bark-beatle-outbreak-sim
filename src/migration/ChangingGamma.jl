@@ -33,7 +33,7 @@ orig_params = (
     # from approximate values table
     lambda = 0.001, # only this value in table
     r = 0.1,        # only this value in table
-    e = 10,         # lower end --> test in grid
+    e = 10,         # lower end
 
     # aggregation function
     beta_function = aggreg_beta_mig,

@@ -22,13 +22,11 @@ orig_params = (
     # from approximate values table
     lambda = 0.001, # only this value in table
     r = 0.1,        # only this value in table
-    e = 10,         # lower end --> test in grid
+    e = 10,         # lower end
 
     # aggregation function
     beta_function = aggreg_beta,
 )
-
-# display(draw_phase_diagram(orig_params, (S, I, nondim_params, orig_params) -> [orig_params.m *dS(S, I, nondim_params)/orig_params.lambda, orig_params.m*dI(S, I, nondim_params)/orig_params.lambda]))
 
 # # simple simulation
 # init = (
@@ -39,8 +37,7 @@ orig_params = (
 # Ss, Is = simple_simulation(orig_params, init, (dS = dS, dI = dI); delta_t = 0.1, stop_t = 5)
 # display(plot([Ss, Is], xlabel = "Time", label=["S" "I"], linewidth=3)) # create plot of S and I
 
-
-# run exploratory_analysis to visualize figure 1
+# run exploratory_analysis to visualize figure 3
 ea_results = exploratory_analysis((S, I, nondim_params, orig_params) -> [dS(S, I, nondim_params), dI(S, I, nondim_params)], orig_params,
     "../../out/fig_3/",
     [
